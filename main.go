@@ -7,7 +7,7 @@ import (
 
 func main() {
 
-	clipboardmonitor.OnClipboardDataChanged = func(data string) { // function to handle clipboard data change (text data only)
+	clipboardmonitor.OnClipboardDataChanged = func(data string) { // function to handle clipboard data changes (text data only)
 		fmt.Printf("new clipboard data :\n %s\n", data)
 	}
 	go clipboardmonitor.EnableClipboardMonitor() // running on goroutine to prevent blocking main thread
